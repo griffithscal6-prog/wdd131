@@ -1,0 +1,64 @@
+body {
+    background-color: #ddd;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Outer box */
+#container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    border: 2px solid #bbb;
+    padding: 40px;
+}
+
+/* Center everything */
+#content {
+    text-align: center;
+}
+
+/* Main title */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #1f5f8b;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Divider line */
+hr {
+    border: none;
+    height: 3px;
+    background-color: #1f5f8b;
+    width: 70%;
+    margin: 20px auto;
+}
+
+/* Image styling */
+img {
+    width: 250px;
+    margin: 20px 0;
+}
+
+/* Section headings */
+h2 {
+    margin-top: 25px;
+    font-size: 1.6em;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
