@@ -1,0 +1,70 @@
+/* Reset some default spacing */
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #e6e6e6;
+}
+
+/* Main card container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px 50px;
+    background-color: white;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    letter-spacing: 4px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+h2 {
+    color: #2f5d9b;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Divider line */
+hr {
+    width: 60%;
+    margin: 15px auto 25px;
+    border: 0;
+    border-top: 1px solid #cfcfcf;
+}
+
+/* Paragraph styling */
+p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Italic line */
+.italic {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Numbered list */
+ol {
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Logo styling */
+.logo {
+    margin-top: 40px;
+    width: 150px;
+}
