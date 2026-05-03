@@ -1,11 +1,10 @@
-/* Reset some default spacing */
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
     background-color: #e6e6e6;
+    color: black;
 }
 
-/* Main card container */
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -15,14 +14,20 @@ body {
     text-align: center;
 }
 
-/* Title */
+/* NEW: dropdown styling */
+select {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
 h1 {
     letter-spacing: 4px;
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-/* Subtitle */
 h2 {
     color: #2f5d9b;
     letter-spacing: 3px;
@@ -30,7 +35,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Divider line */
 hr {
     width: 60%;
     margin: 15px auto 25px;
@@ -38,20 +42,17 @@ hr {
     border-top: 1px solid #cfcfcf;
 }
 
-/* Paragraph styling */
 p {
     text-align: left;
     line-height: 1.6;
     font-size: 16px;
 }
 
-/* Italic line */
 .italic {
     font-style: italic;
     margin-top: 20px;
 }
 
-/* Numbered list */
 ol {
     text-align: left;
     margin-top: 10px;
@@ -63,8 +64,26 @@ li {
     line-height: 1.6;
 }
 
-/* Logo styling */
 .logo {
     margin-top: 40px;
     width: 150px;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.dark .container {
+    background-color: #333;
+    border-color: #777;
+}
+
+.dark h2 {
+    color: #9bbcff;
+}
+
+.dark hr {
+    border-top-color: #777;
 }
