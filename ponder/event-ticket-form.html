@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Ticket Form</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/event-ticket-form.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Event Ticket</h1>
+
+        <form id="ticketForm">
+
+            <div class="row">
+                <div class="field">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName">
+                </div>
+
+                <div class="field">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="type">Type</label>
+
+                    <select id="type">
+                        <option value="">Choose one</option>
+                        <option value="student">Student</option>
+                        <option value="guest">Guest</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate">
+                </div>
+            </div>
+
+            <!-- Hidden Section -->
+            <div id="extraFieldContainer" class="hidden">
+                <label id="extraLabel" for="extraInput"></label>
+                <input type="text" id="extraInput">
+            </div>
+
+            <button type="submit">Create Ticket</button>
+
+        </form>
+
+        <div id="errors"></div>
+
+        <div id="ticketInfo"></div>
+
+    </div>
+
+    <script src="event-ticket-form.js"></script>
+
+</body>
+</html>
