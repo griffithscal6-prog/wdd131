@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Character Card - Swamp Beast Diplomat</title>
+    <meta name="description" content="A JavaScript Character Card demonstrating object properties and methods.">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card - Swamp Beast Diplomat">
+    <meta property="og:description" content="A JavaScript Character Card demonstrating object properties and methods.">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://picsum.photos/1200/630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card - Swamp Beast Diplomat">
+    <meta name="twitter:description" content="A JavaScript Character Card demonstrating object properties and methods.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles/character-card.css">
+</head>
+<body>
+
+    <div class="card">
+        <img
+            id="character-image"
+            class="image"
+            src="images/character-card.webp"
+            alt="Swamp Beast Diplomat">
+
+        <div class="name" id="character-name"></div>
+
+        <div class="stats">
+            <p><strong>Class:</strong> <span id="character-class"></span></p>
+            <p><strong>Level:</strong> <span id="character-level"></span></p>
+            <p><strong>Health:</strong> <span id="character-health"></span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="attack-btn">Attack Character</button>
+            <button id="levelup-btn">Level Up</button>
+        </div>
+    </div>
+
+    <script src="character-card.js"></script>
+
+</body>
+</html>
