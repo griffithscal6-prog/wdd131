@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery with Modals</title>
+    <link rel="stylesheet" href="responsive_gallery.css">
+</head>
+<body>
+
+    <h1>Gallery</h1>
+
+    <section class="gallery">
+
+        <figure>
+            <img src="images/book-sm.jpg" alt="person reading a book">
+        </figure>
+
+        <figure>
+            <img src="images/couch-sm.jpg" alt="person sitting on a couch with a phone">
+        </figure>
+
+        <figure>
+            <img src="images/desk-sm.jpg" alt="work desk">
+        </figure>
+
+        <figure>
+            <img src="images/keyboard-sm.jpg" alt="person typing on a keyboard">
+        </figure>
+
+        <figure>
+            <img src="images/phone-sm.jpg" alt="person looking at a phone">
+        </figure>
+
+        <figure>
+            <img src="images/sit-sm.jpg" alt="person sitting on a couch">
+        </figure>
+
+    </section>
+
+    <dialog>
+        <img src="" alt="">
+        <button class="close-viewer">X</button>
+    </dialog>
+
+    <script>
+        const gallery = document.querySelector('.gallery');
+        const modal = document.querySelector('dialog');
+        const modalImage = modal.querySelector('img');
+        const closeButton = modal.querySelector('.close-viewer');
+
+        gallery.addEventListener('click', openModal);
+
+        function openModal(e) {
+
+            if (e.target.tagName !== "IMG") return;
+
+            const smallImage = e.target.src;
+            const fullImage = smallImage.replace("-sm", "-full");
+
+            modalImage.src = fullImage;
+            modalImage.alt = e.target.alt;
+
+            modal.showModal();
+        }
+
+        closeButton.addEventListener('click', () => {
+            modal.close();
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.close();
+            }
+        });
+    </script>
+
+</body>
+</html>
