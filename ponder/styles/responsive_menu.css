@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 1000px;
+    margin: 1rem auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 1em;
+    border: 1px solid #ccc;
+}
+
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    display: block;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Hide navigation on mobile */
+.hide a {
+    display: none;
+}
+
+/* Show navigation when menu is open */
+nav:not(.hide) a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #616061;
+}
+
+/* Hamburger animation */
+.change .bar1 {
+    transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -10px) rotate(45deg);
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    nav.hide a {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
