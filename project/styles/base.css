@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #7A1414;
+    --secondary-color: #D4AF37;
+    --accent1-color: #2F3E46;
+    --accent2-color: #F5F1E6;
+
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#logo {
+    width: 140px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    transition: background-color .3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: .75rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color .3s;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+}

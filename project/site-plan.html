@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>D&D 5.5e Character Builder Project Plan</h1>
+			<h2>Calvin Griffiths</h2>
+			<h2>WDD 131-03</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>The purpose of this website is to help players create a first-level Dungeons & Dragons 5.5e character through a guided, step-by-step character creation process. Users will select a class, species, background, and assign ability scores generated using the official 4d6-drop-lowest method. The completed character summary will display the selected class, species, background, traits, proficiencies, origin feat, class features, ability scores, and ability modifiers.</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>This website is intended for new and experienced Dungeons & Dragons players who want an easy-to-use character creation tool. It is especially useful for players creating a first-level character who want a guided process instead of searching through multiple reference sources while building their character.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>The website will use JavaScript to load character data from a JSON file and dynamically generate the available classes, species, and backgrounds. Users will make selections that are stored throughout the character creation process. JavaScript will roll four six-sided dice, remove the lowest roll, total the remaining three dice, calculate ability modifiers, respond to user interactions, update the page using DOM manipulation, save progress with Local Storage, and generate a final character summary page.</p>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="images/Project-Logo.png" alt="D&D 5.5e Character Builder Logo" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/7a1414-d4af37-2f3e46-f5f1e6" 
+				target="_blank"> https://coolors.co/7a1414-d4af37-2f3e46-f5f1e6</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">#7A1414
+						</td> <td class="secondary">#D4AF37
+						</td> <td class="accent1">#2F3E46</td>
+						<td class="accent2">#F5F1E6</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				START<br><br> Load the JSON database.<br><br> 
+				Display the landing page.<br><br> 
+				If the user begins character creation:<br> 
+				&nbsp;&nbsp;Display all available classes.<br> 
+				&nbsp;&nbsp;Save the selected class.<br><br> 
+				&nbsp;&nbsp;Display all available species.<br> 
+				&nbsp;&nbsp;If the selected species requires an additional choice, display the available options and save the selection.<br><br> 
+				&nbsp;&nbsp;Display all available backgrounds.<br> 
+				&nbsp;&nbsp;Save the selected background.<br><br> 
+				&nbsp;&nbsp;Repeat six times:<br> 
+				&nbsp;&nbsp;&nbsp;&nbsp;Roll four six-sided dice.<br> 
+				&nbsp;&nbsp;&nbsp;&nbsp;Remove the lowest die.<br> 
+				&nbsp;&nbsp;&nbsp;&nbsp;Add the remaining three dice.<br> 
+				&nbsp;&nbsp;&nbsp;&nbsp;Allow the user to assign the score to an unused ability.<br><br> 
+				Calculate all ability modifiers.<br><br> 
+				Store the completed character using Local Storage.<br><br> 
+				Display a summary page showing the completed character and all selected information.<br><br> 
+				END
+			</p>
+
+			<h3>Wireframes</h3>
+			<p>
+				Wireframes will be created for each page before implementation. 
+				The website will use a consistent header, navigation menu, and logo across all pages. 
+			</p>
+
+			<h3>Landing page</h3>
+			<p>
+				The landing page will introduce the project, display the website logo, provide navigation links, explain the purpose of the application, and include a button to begin creating a character.
+			</p>
+			<img src="#" alt="home page wireframe" />
+
+			<h3>Character Creation Pages</h3>
+			<p>
+				Separate pages will allow the user to select a class, species, background, and assign ability scores before displaying the final character summary.
+			</p>
+			<img src="#" alt="page 2 wireframe" />
+		</main>
+	</body>
+</html>
