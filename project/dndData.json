@@ -1,0 +1,764 @@
+{
+  "metadata": {
+    "game": "Dungeons & Dragons",
+    "edition": "5.5e",
+    "rulesVersion": "2024"
+  },
+
+  "abilities": [
+    "Strength",
+    "Dexterity",
+    "Constitution",
+    "Intelligence",
+    "Wisdom",
+    "Charisma"
+  ],
+
+  "classes": [
+    {
+      "id": "barbarian",
+      "name": "Barbarian",
+      "primaryAbility": "Strength",
+      "hitDie": "d12",
+      "weaponProficiencies": [
+        "Simple Weapons",
+        "Martial Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor",
+        "Medium Armor",
+        "Shields"
+      ],
+      "classFeatures": [
+        "Rage",
+        "Unarmored Defense",
+        "Weapon Mastery",
+        "Danger Sense",
+        "Reckless Attack",
+        "Barbarian Subclass",
+        "Fast Movement",
+        "Feral Instinct",
+        "Brutal Strike",
+        "Persistent Rage",
+        "Relentless Rage",
+        "Improved Brutal Strike",
+        "Indomitable Might",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "bard",
+      "name": "Bard",
+      "primaryAbility": "Charisma",
+      "hitDie": "d8",
+      "weaponProficiencies": [
+        "Simple Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor"
+      ],
+      "classFeatures": [
+        "Bardic Inspiration",
+        "Spellcasting",
+        "Expertise",
+        "Jack of All Trades",
+        "Bard Subclass",
+        "Font of Inspiration",
+        "Countercharm",
+        "Expertise",
+        "Magical Secrets",
+        "Superior Inspiration",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "cleric",
+      "name": "Cleric",
+      "primaryAbility": "Wisdom",
+      "hitDie": "d8",
+      "weaponProficiencies": [
+        "Simple Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor",
+        "Medium Armor",
+        "Shields"
+      ],
+      "classFeatures": [
+        "Spellcasting",
+        "Divine Order",
+        "Channel Divinity",
+        "Cleric Subclass",
+        "Sear Undead",
+        "Blessed Strikes",
+        "Divine Intervention",
+        "Greater Divine Intervention",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "druid",
+      "name": "Druid",
+      "primaryAbility": "Wisdom",
+      "hitDie": "d8",
+      "weaponProficiencies": [
+        "Simple Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor",
+        "Shields"
+      ],
+      "classFeatures": [
+        "Druidic",
+        "Primal Order",
+        "Spellcasting",
+        "Wild Shape",
+        "Druid Subclass",
+        "Wild Resurgence",
+        "Elemental Fury",
+        "Thousand Forms",
+        "Beast Spells",
+        "Archdruid",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "fighter",
+      "name": "Fighter",
+      "primaryAbility": "Strength or Dexterity",
+      "hitDie": "d10",
+      "weaponProficiencies": [
+        "Simple Weapons",
+        "Martial Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor",
+        "Medium Armor",
+        "Heavy Armor",
+        "Shields"
+      ],
+      "classFeatures": [
+        "Fighting Style",
+        "Second Wind",
+        "Weapon Mastery",
+        "Action Surge",
+        "Tactical Mind",
+        "Fighter Subclass",
+        "Tactical Shift",
+        "Extra Attack",
+        "Indomitable",
+        "Two Extra Attacks",
+        "Studied Attacks",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "monk",
+      "name": "Monk",
+      "primaryAbility": "Dexterity and Wisdom",
+      "hitDie": "d8",
+      "weaponProficiencies": [
+        "Simple Weapons",
+        "Martial Weapons with the Light Property"
+      ],
+      "armorTraining": [
+        "None"
+      ],
+      "classFeatures": [
+        "Martial Arts",
+        "Unarmored Defense",
+        "Monk's Focus",
+        "Uncanny Metabolism",
+        "Deflect Attacks",
+        "Monk Subclass",
+        "Stunning Strike",
+        "Empowered Strikes",
+        "Evasion",
+        "Heightened Focus",
+        "Self-Restoration",
+        "Disciplined Survivor",
+        "Superior Defense",
+        "Body and Mind",
+        "Epic Boon"
+      ]
+    },    
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "primaryAbility": "Strength and Charisma",
+      "hitDie": "d10",
+      "weaponProficiencies": [
+        "Simple Weapons",
+        "Martial Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor",
+        "Medium Armor",
+        "Heavy Armor",
+        "Shields"
+      ],
+      "classFeatures": [
+        "Lay on Hands",
+        "Spellcasting",
+        "Weapon Mastery",
+        "Fighting Style",
+        "Paladin's Smite",
+        "Paladin Subclass",
+        "Faithful Steed",
+        "Aura of Protection",
+        "Abjure Foes",
+        "Restoring Touch",
+        "Radiant Strikes",
+        "Aura Expansion",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "ranger",
+      "name": "Ranger",
+      "primaryAbility": "Dexterity and Wisdom",
+      "hitDie": "d10",
+      "weaponProficiencies": [
+        "Simple Weapons",
+        "Martial Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor",
+        "Medium Armor",
+        "Shields"
+      ],
+      "classFeatures": [
+        "Favored Enemy",
+        "Weapon Mastery",
+        "Spellcasting",
+        "Deft Explorer",
+        "Ranger Subclass",
+        "Roving",
+        "Tireless",
+        "Nature's Veil",
+        "Precise Hunter",
+        "Feral Senses",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "primaryAbility": "Dexterity",
+      "hitDie": "d8",
+      "weaponProficiencies": [
+        "Simple Weapons",
+        "Martial Weapons with the Finesse or Light Property"
+      ],
+      "armorTraining": [
+        "Light Armor"
+      ],
+      "classFeatures": [
+        "Expertise",
+        "Sneak Attack",
+        "Thieves' Cant",
+        "Weapon Mastery",
+        "Cunning Action",
+        "Rogue Subclass",
+        "Steady Aim",
+        "Uncanny Dodge",
+        "Evasion",
+        "Reliable Talent",
+        "Improved Cunning Strike",
+        "Elusive",
+        "Stroke of Luck",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "sorcerer",
+      "name": "Sorcerer",
+      "primaryAbility": "Charisma",
+      "hitDie": "d6",
+      "weaponProficiencies": [
+        "Simple Weapons"
+      ],
+      "armorTraining": [
+        "None"
+      ],
+      "classFeatures": [
+        "Innate Sorcery",
+        "Spellcasting",
+        "Font of Magic",
+        "Metamagic",
+        "Sorcerer Subclass",
+        "Sorcery Incarnate",
+        "Arcane Apotheosis",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "warlock",
+      "name": "Warlock",
+      "primaryAbility": "Charisma",
+      "hitDie": "d8",
+      "weaponProficiencies": [
+        "Simple Weapons"
+      ],
+      "armorTraining": [
+        "Light Armor"
+      ],
+      "classFeatures": [
+        "Eldritch Invocations",
+        "Pact Magic",
+        "Magical Cunning",
+        "Warlock Subclass",
+        "Contact Patron",
+        "Mystic Arcanum",
+        "Epic Boon"
+      ]
+    },
+
+    {
+      "id": "wizard",
+      "name": "Wizard",
+      "primaryAbility": "Intelligence",
+      "hitDie": "d6",
+      "weaponProficiencies": [
+        "Simple Weapons"
+      ],
+      "armorTraining": [
+        "None"
+      ],
+      "classFeatures": [
+        "Spellcasting",
+        "Ritual Adept",
+        "Arcane Recovery",
+        "Scholar",
+        "Wizard Subclass",
+        "Memorize Spell",
+        "Spell Mastery",
+        "Signature Spells",
+        "Epic Boon"
+      ]
+    }
+  ],
+    "species": [
+    {
+      "id": "aasimar",
+      "name": "Aasimar",
+      "traits": [
+        "Celestial Resistance",
+        "Darkvision",
+        "Healing Hands",
+        "Light Bearer",
+        "Celestial Revelation"
+      ],
+      "optionSet": "celestial-revelation"
+    },
+
+    {
+      "id": "dragonborn",
+      "name": "Dragonborn",
+      "traits": [
+        "Draconic Ancestry",
+        "Breath Weapon",
+        "Damage Resistance",
+        "Darkvision",
+        "Draconic Flight"
+      ],
+      "optionSet": null
+    },
+
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "traits": [
+        "Darkvision",
+        "Dwarven Resilience",
+        "Dwarven Toughness",
+        "Stonecunning"
+      ],
+      "optionSet": null
+    },
+
+    {
+      "id": "elf",
+      "name": "Elf",
+      "traits": [
+        "Darkvision",
+        "Elven Lineage",
+        "Fey Ancestry",
+        "Keen Senses",
+        "Trance"
+      ],
+      "optionSet": "elven-lineage"
+    },
+
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "traits": [
+        "Darkvision",
+        "Gnomish Cunning",
+        "Gnomish Lineage"
+      ],
+      "optionSet": "gnomish-lineage"
+    },
+
+    {
+      "id": "goliath",
+      "name": "Goliath",
+      "traits": [
+        "Giant Ancestry",
+        "Large Form",
+        "Powerful Build"
+      ],
+      "optionSet": "giant-ancestry"
+    },
+
+    {
+      "id": "halfling",
+      "name": "Halfling",
+      "traits": [
+        "Brave",
+        "Halfling Nimbleness",
+        "Luck",
+        "Naturally Stealthy"
+      ],
+      "optionSet": null
+    },
+
+    {
+      "id": "human",
+      "name": "Human",
+      "traits": [
+        "Resourceful",
+        "Skillful",
+        "Versatile"
+      ],
+      "optionSet": null
+    },
+
+    {
+      "id": "orc",
+      "name": "Orc",
+      "traits": [
+        "Adrenaline Rush",
+        "Darkvision",
+        "Relentless Endurance"
+      ],
+      "optionSet": null
+    },
+
+    {
+      "id": "tiefling",
+      "name": "Tiefling",
+      "traits": [
+        "Darkvision",
+        "Fiendish Legacy",
+        "Otherworldly Presence"
+      ],
+      "optionSet": "fiendish-legacy"
+    }
+  ],
+  "optionSets": [
+    {
+      "id": "elven-lineage",
+      "name": "Elven Lineage",
+      "options": [
+        "Drow",
+        "High Elf",
+        "Wood Elf"
+      ]
+    },
+
+    {
+      "id": "gnomish-lineage",
+      "name": "Gnomish Lineage",
+      "options": [
+        "Forest Gnome",
+        "Rock Gnome"
+      ]
+    },
+
+    {
+      "id": "giant-ancestry",
+      "name": "Giant Ancestry",
+      "options": [
+        "Cloud's Jaunt",
+        "Fire's Burn",
+        "Frost's Chill",
+        "Hill's Tumble",
+        "Stone's Endurance",
+        "Storm's Thunder",
+        "Frost Giant's Option"
+      ]
+    },
+
+    {
+      "id": "fiendish-legacy",
+      "name": "Fiendish Legacy",
+      "options": [
+        "Abyssal",
+        "Chthonic",
+        "Infernal"
+      ]
+    },
+
+    {
+      "id": "celestial-revelation",
+      "name": "Celestial Revelation",
+      "options": [
+        "Necrotic Shroud",
+        "Radiant Consumption",
+        "Radiant Soul"
+      ]
+    }
+  ],
+    "backgrounds": [
+    {
+      "id": "acolyte",
+      "name": "Acolyte",
+      "originFeat": "Magic Initiate (Cleric)",
+      "skills": [
+        "Insight",
+        "Religion"
+      ],
+      "tool": "Calligrapher's Supplies"
+    },
+
+    {
+      "id": "artisan",
+      "name": "Artisan",
+      "originFeat": "Crafter",
+      "skills": [
+        "Investigation",
+        "Persuasion"
+      ],
+      "tool": "Artisan's Tools"
+    },
+
+    {
+      "id": "charlatan",
+      "name": "Charlatan",
+      "originFeat": "Skilled",
+      "skills": [
+        "Deception",
+        "Sleight of Hand"
+      ],
+      "tool": "Forgery Kit"
+    },
+
+    {
+      "id": "criminal",
+      "name": "Criminal",
+      "originFeat": "Alert",
+      "skills": [
+        "Sleight of Hand",
+        "Stealth"
+      ],
+      "tool": "Thieves' Tools"
+    },
+
+    {
+      "id": "entertainer",
+      "name": "Entertainer",
+      "originFeat": "Musician",
+      "skills": [
+        "Acrobatics",
+        "Performance"
+      ],
+      "tool": "Musical Instrument"
+    },
+
+    {
+      "id": "farmer",
+      "name": "Farmer",
+      "originFeat": "Tough",
+      "skills": [
+        "Animal Handling",
+        "Nature"
+      ],
+      "tool": "Carpenter's Tools"
+    },
+
+    {
+      "id": "guard",
+      "name": "Guard",
+      "originFeat": "Alert",
+      "skills": [
+        "Athletics",
+        "Perception"
+      ],
+      "tool": "Gaming Set"
+    },
+
+    {
+      "id": "guide",
+      "name": "Guide",
+      "originFeat": "Magic Initiate (Druid)",
+      "skills": [
+        "Stealth",
+        "Survival"
+      ],
+      "tool": "Cartographer's Tools"
+    },
+
+    {
+      "id": "hermit",
+      "name": "Hermit",
+      "originFeat": "Healer",
+      "skills": [
+        "Medicine",
+        "Religion"
+      ],
+      "tool": "Herbalism Kit"
+    },
+
+    {
+      "id": "merchant",
+      "name": "Merchant",
+      "originFeat": "Lucky",
+      "skills": [
+        "Animal Handling",
+        "Persuasion"
+      ],
+      "tool": "Navigator's Tools"
+    },
+
+    {
+      "id": "noble",
+      "name": "Noble",
+      "originFeat": "Skilled",
+      "skills": [
+        "History",
+        "Persuasion"
+      ],
+      "tool": "Gaming Set"
+    },
+
+    {
+      "id": "sage",
+      "name": "Sage",
+      "originFeat": "Magic Initiate (Wizard)",
+      "skills": [
+        "Arcana",
+        "History"
+      ],
+      "tool": "Calligrapher's Supplies"
+    },
+
+    {
+      "id": "sailor",
+      "name": "Sailor",
+      "originFeat": "Tavern Brawler",
+      "skills": [
+        "Acrobatics",
+        "Perception"
+      ],
+      "tool": "Navigator's Tools"
+    },
+
+    {
+      "id": "scribe",
+      "name": "Scribe",
+      "originFeat": "Skilled",
+      "skills": [
+        "Investigation",
+        "Perception"
+      ],
+      "tool": "Calligrapher's Supplies"
+    },
+
+    {
+      "id": "soldier",
+      "name": "Soldier",
+      "originFeat": "Savage Attacker",
+      "skills": [
+        "Athletics",
+        "Intimidation"
+      ],
+      "tool": "Gaming Set"
+    },
+
+    {
+      "id": "wayfarer",
+      "name": "Wayfarer",
+      "originFeat": "Lucky",
+      "skills": [
+        "Insight",
+        "Stealth"
+      ],
+      "tool": "Thieves' Tools"
+    }
+  ],
+    "originFeats": [
+    "Alert",
+    "Crafter",
+    "Healer",
+    "Lucky",
+    "Magic Initiate (Cleric)",
+    "Magic Initiate (Druid)",
+    "Magic Initiate (Wizard)",
+    "Musician",
+    "Savage Attacker",
+    "Skilled",
+    "Skulker",
+    "Tavern Brawler",
+    "Tough"
+  ],
+
+  "skills": [
+    "Acrobatics",
+    "Animal Handling",
+    "Arcana",
+    "Athletics",
+    "Deception",
+    "History",
+    "Insight",
+    "Intimidation",
+    "Investigation",
+    "Medicine",
+    "Nature",
+    "Perception",
+    "Performance",
+    "Persuasion",
+    "Religion",
+    "Sleight of Hand",
+    "Stealth",
+    "Survival"
+  ],
+
+  "toolProficiencies": [
+    "Artisan's Tools",
+    "Calligrapher's Supplies",
+    "Carpenter's Tools",
+    "Cartographer's Tools",
+    "Forgery Kit",
+    "Gaming Set",
+    "Herbalism Kit",
+    "Musical Instrument",
+    "Navigator's Tools",
+    "Thieves' Tools"
+  ],
+
+  "weaponProficiencies": [
+    "Simple Weapons",
+    "Martial Weapons",
+    "Martial Weapons with the Light Property",
+    "Martial Weapons with the Finesse or Light Property"
+  ],
+
+  "armorTraining": [
+    "None",
+    "Light Armor",
+    "Medium Armor",
+    "Heavy Armor",
+    "Shields"
+  ]
+}
