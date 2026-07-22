@@ -165,7 +165,7 @@ h3 {
 
     padding: 1.5rem;
 
-    text-align: center;
+    text-align: left;
 
     transition: .2s;
 
@@ -400,6 +400,92 @@ select {
     border-radius: 8px;
 
     font-size: 1rem;
+
+}
+
+/* ---------- Modal ---------- */
+
+.hidden {
+
+    display: none;
+
+}
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.6);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+.modal-content {
+
+    background: var(--white);
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    width: 400px;
+
+    max-width: 90%;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+
+}
+
+.modal-content h2 {
+
+    margin-top: 0;
+
+}
+
+.option-button {
+
+    display: block;
+
+    width: 100%;
+
+    margin: .75rem 0;
+
+    padding: .8rem;
+
+    background: white;
+
+    border: 2px solid var(--secondary-color);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.option-button:hover {
+
+    background: var(--secondary-color);
+
+}
+
+.option-button.selected {
+
+    background: var(--primary-color);
+
+    color: white;
 
 }
 
