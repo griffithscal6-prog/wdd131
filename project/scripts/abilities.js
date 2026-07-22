@@ -154,7 +154,7 @@ function enableAvailableButtons() {
             document.getElementById(ability + "Button");
 
         button.disabled =
-            character.abilities[ability] !== null;
+            character.abilities[ability].score !== null;
 
     });
 
@@ -178,10 +178,10 @@ function disableButtons() {
 
 function assignAbility(ability) {
 
-    character.abilities[ability] =
+    character.abilities[ability].score =
         currentScore;
 
-    character.modifiers[ability] =
+    character.abilities[ability].modifier =
         calculateModifier(currentScore);
 
     saveCharacter();
@@ -227,10 +227,10 @@ function updateAssignedScores() {
             document.createElement("p");
 
         const score =
-            character.abilities[ability];
+            character.abilities[ability].score;
 
         const modifier =
-            character.modifiers[ability];
+            character.abilities[ability].modifier;
 
         if (score === null) {
 
@@ -262,7 +262,7 @@ function checkCompletion() {
     const finished =
         abilityList.every(ability => {
 
-            return character.abilities[ability] !== null;
+            return character.abilities[ability].score !== null;
 
         });
 

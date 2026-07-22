@@ -57,7 +57,7 @@ function buildClassCard(characterClass) {
 
     button.addEventListener("click", () => {
 
-        setClass(characterClass.id);
+        setClass(classId);
 
         saveCharacter();
 

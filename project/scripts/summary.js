@@ -87,10 +87,10 @@ function displayAbilityScores() {
     Object.keys(character.abilities).forEach(ability => {
 
         const score =
-            character.abilities[ability];
+            character.abilities[ability].score;
 
         const modifier =
-            character.modifiers[ability];
+            character.abilities[ability].modifier;
 
         const sign =
             modifier >= 0 ? "+" : "";
