@@ -22,81 +22,89 @@
 
 <body>
 
-<header>
+    <header>
 
-    <img
-        src="images/Project-Logo.png"
-        alt="D&D 5.5e Character Builder Logo"
-        id="logo"
-    >
+        <img
+            src="images/Project-Logo.png"
+            alt="D&D 5.5e Character Builder Logo"
+            id="logo"
+        >
 
-    <h1>D&D 5.5e Character Builder</h1>
+        <h1>D&D 5.5e Character Builder</h1>
 
-    <nav>
+        <nav>
 
-        <ul>
+            <ul>
 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="classes.html">Classes</a></li>
-            <li><a href="species.html">Species</a></li>
-            <li><a href="backgrounds.html">Backgrounds</a></li>
-            <li><a href="abilities.html">Abilities</a></li>
-            <li><a href="summary.html">Summary</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="species.html">Species</a></li>
+                <li><a href="backgrounds.html">Backgrounds</a></li>
+                <li><a href="abilities.html">Abilities</a></li>
+                <li><a href="summary.html">Summary</a></li>
 
-        </ul>
+            </ul>
 
-    </nav>
+        </nav>
 
-</header>
+    </header>
 
-<main>
+    <main>
 
-    <h2>Select a Species</h2>
+        <h2>Select a Species</h2>
 
-    <p>
+        <p>
 
-        Choose the species for your character.
+            Choose the species for your character.
 
-    </p>
+        </p>
 
-    <section id="speciesContainer"
-    class="card-container"
-    >
+        <section id="speciesContainer"
+        class="card-container"
+        >
 
-        <!-- JavaScript will generate the species cards here -->
+            <!-- JavaScript will generate the species cards here -->
 
-    </section>
+        </section>
+    
+    </main>
+
 
     <!-- Option Set Modal -->
 
-    <div id="optionModal" class="modal hidden">
+    <div id="optionModal" class="modal">
 
         <div class="modal-content">
 
             <h2 id="modalTitle"></h2>
 
-            <div id="optionButtons"></div>
+            <p id="modalDescription"></p>
 
-            <button id="confirmOption" disabled>
-                Confirm
+            <div id="modalOptions"
+                class="modal-options">
+            </div>
+
+            <button
+                id="cancelModalButton"
+                type="button">
+
+                Cancel
             </button>
 
         </div>
 
     </div>
 
-</main>
+    <footer>
 
-<footer>
+        <p>
 
-    <p>
+            &copy; 2026 Calvin Griffiths |
+            WDD 131 Final Project
 
-        &copy; 2026 Calvin Griffiths |
-        WDD 131 Final Project
+        </p>
 
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 

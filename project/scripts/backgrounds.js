@@ -8,7 +8,7 @@
 document.addEventListener("DOMContentLoaded", initializePage);
 
 async function initializePage() {
-
+    
     loadCharacter();
 
     const data = await loadData();
@@ -16,6 +16,14 @@ async function initializePage() {
     if (!data) {
         return;
     }
+    if (character.class != null)
+        console.log(`Character Class: ${character.class}`);
+    if (character.species != null)
+        console.log(`Character Species: ${character.species}`);
+    if (character.selectionKey != false)
+        console.log(`Selection for "${character.selectionKey}" Currently set to "${character.selectedOption}".`);
+    if (character.background != null)
+        console.log(`Character Background: ${character.background}`);
 
     displayBackgrounds(data.backgrounds);
 

@@ -7,8 +7,6 @@
 
 document.addEventListener("DOMContentLoaded", initializePage);
 
-
-
 async function initializePage() {
 
     loadCharacter();
@@ -20,6 +18,15 @@ async function initializePage() {
         return;
 
     }
+    if (character.class != null)
+        console.log(`Character Class: ${character.class}`);
+    if (character.species != null)
+        console.log(`Character Species: ${character.species}`);
+    if (character.selectionKey != false && character.selectionKey != undefined)
+        console.log(`Selection for "${character.selectionKey}" Currently set to "${character.selectedOption}".`);
+    if (character.background != null)
+        console.log(`Character Background: ${character.background}`);
+
 
     displayCharacterInfo(data);
 
@@ -64,6 +71,9 @@ function displayCharacterInfo(data) {
     addParagraph(container, "Class", characterClass.name);
 
     addParagraph(container, "Species", species.name);
+
+    if (character.selectionKey != false)
+        addParagraph(container, character.selectionKey, character.selectedOption ?? "N/A");
 
     addParagraph(container, "Background", background.name);
 

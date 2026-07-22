@@ -155,6 +155,26 @@ function setOriginFeat(featId) {
 function setSelection(category, option) {
 
     character.selections[category] = option;
+    character.selectionKey = category;
+    character.selectedOption = option;
+    
+}
+
+/**
+ * Sets the selectionKey.
+ */
+function setSelectionKey(selectionKeyId) {
+
+    character.selectionKey = selectionKeyId;
+
+}
+
+/**
+ * Sets the selected Option.
+ */
+function setSelectedOption(selectedOptionId) {
+
+    character.selectedOption = selectedOptionId;
 
 }
 
@@ -165,6 +185,8 @@ function resetCharacter() {
 
     character.class = null;
     character.species = null;
+    character.selectionKey = null;
+    character.selectedOption = null;
     character.background = null;
     character.originFeat = null;
     character.selections = {};

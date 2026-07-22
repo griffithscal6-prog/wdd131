@@ -14,10 +14,25 @@ async function initializePage() {
     const data = await loadData();
 
     if (!data) {
+
         return;
+
     }
+    if (character.class != null)
+        console.log(`Character Class: ${character.class}`);
+    if (character.species != null)
+        console.log(`Character Species: ${character.species}`);
+    if (character.selectionKey != false && character.selectionKey != undefined)
+        console.log(`Selection for "${character.selectionKey}" Currently set to "${character.selectedOption}".`);
+    if (character.background != null)
+        console.log(`Character Background: ${character.background}`);
+    
 
     displaySpecies(data.species);
+
+   document
+        .getElementById("cancelModalButton")
+        .addEventListener("click", closeModal);
 
 }
 
@@ -83,20 +98,141 @@ function buildSpeciesCard(species) {
 
     button.addEventListener("click", () => {
 
-        setSpecies(species.id);
-
-        saveCharacter();
-
-        // Placeholder for future option selections
-        // (Elven Lineage, Fiendish Legacy, etc.)
-
-        window.location.href =
-            "backgrounds.html";
+    chooseSpecies(species);
 
     });
 
     article.appendChild(button);
 
     container.appendChild(article);
+
+}
+
+function chooseSpecies(species) {
+
+    setSpecies(species.id);
+
+    if (!species.optionSet) {
+        character.selectionKey = false;
+
+        saveCharacter();
+
+        window.location.href =
+            "backgrounds.html";
+
+        return;
+
+    }
+
+    const optionSet =
+        dndData.optionSets.find(option =>
+
+            option.id === species.optionSet
+
+        );
+
+    if (!optionSet) {
+
+        console.error(
+
+            `Option Set "${species.optionSet}" not found.`
+
+        );
+
+        return;
+
+    }
+
+    showOptionModal(optionSet);
+
+}
+
+function showOptionModal(optionSet) {
+
+    const modal =
+        document.getElementById("optionModal");
+
+    document.getElementById("modalTitle")
+        .textContent = optionSet.name;
+
+    document.getElementById("modalDescription")
+        .textContent =
+            "Choose one option.";
+
+    const container =
+        document.getElementById("modalOptions");
+
+    container.innerHTML = "";
+
+    optionSet.options.forEach(option => {
+
+        const button =
+            document.createElement("button");
+
+        button.classList.add("option-button");
+
+        button.textContent = option;
+
+        button.addEventListener("click", () => {
+
+            character.selectionKey = null;
+
+            switch (optionSet.id) {
+
+                case "elven-lineage":
+                    character.selectionKey = "Lineage";
+                    break;
+
+                case "gnomish-lineage":
+                    character.selectionKey = "Lineage";
+                    break;
+
+                case "giant-ancestry":
+                    character.selectionKey = "Ancestry";
+                    break;
+
+                case "fiendish-legacy":
+                    character.selectionKey = "Legacy";
+                    break;
+
+                case "celestial-revelation":
+                    character.selectionKey = "Revelation";
+                    break;
+
+                default:
+                    character.selectionKey = optionSet.id;
+
+            }
+
+            setSelection(
+                character.selectionKey,
+                option
+            );
+
+            setSelectionKey(character.selectionKey);
+            setSelectedOption(character.selectedOption);
+            saveCharacter();
+            
+
+            closeModal();
+
+            window.location.href =
+                "backgrounds.html";
+
+        });
+
+        container.appendChild(button);
+
+    });
+
+    modal.classList.add("show");
+
+}
+
+function closeModal() {
+
+    document
+        .getElementById("optionModal")
+        .classList.remove("show");
 
 }

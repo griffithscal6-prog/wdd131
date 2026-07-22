@@ -469,7 +469,7 @@
   "optionSets": [
     {
       "id": "elven-lineage",
-      "name": "Elven Lineage",
+      "name": "Select Your Elven Lineage",
       "options": [
         "Drow",
         "High Elf",
@@ -479,7 +479,7 @@
 
     {
       "id": "gnomish-lineage",
-      "name": "Gnomish Lineage",
+      "name": "Select Your Gnomish Lineage",
       "options": [
         "Forest Gnome",
         "Rock Gnome"
@@ -488,7 +488,7 @@
 
     {
       "id": "giant-ancestry",
-      "name": "Giant Ancestry",
+      "name": "Select Your Giant's Ancestry",
       "options": [
         "Cloud's Jaunt",
         "Fire's Burn",
@@ -502,7 +502,7 @@
 
     {
       "id": "fiendish-legacy",
-      "name": "Fiendish Legacy",
+      "name": "Select Your Fiendish Legacy",
       "options": [
         "Abyssal",
         "Chthonic",
@@ -512,7 +512,7 @@
 
     {
       "id": "celestial-revelation",
-      "name": "Celestial Revelation",
+      "name": "Select Your Celestial Revelation",
       "options": [
         "Necrotic Shroud",
         "Radiant Consumption",
