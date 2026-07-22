@@ -40,7 +40,7 @@ function buildSpeciesCard(species) {
     const article =
         document.createElement("article");
 
-    article.classList.add("species-card");
+    article.classList.add("selection-card");
 
     const heading =
         document.createElement("h3");

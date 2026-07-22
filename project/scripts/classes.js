@@ -41,7 +41,7 @@ function buildClassCard(characterClass) {
     const article =
         document.createElement("article");
 
-    article.classList.add("class-card");
+    article.classList.add("selection-card");
 
     const heading =
         document.createElement("h3");

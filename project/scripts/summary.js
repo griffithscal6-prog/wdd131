@@ -262,7 +262,7 @@ function capitalize(text) {
 
 function startOver() {
 
-    localStorage.removeItem("character");
+    localStorage.removeItem("dndCharacter");
 
     window.location.href =
         "index.html";

@@ -40,7 +40,7 @@ function buildBackgroundCard(background) {
     const article =
         document.createElement("article");
 
-    article.classList.add("background-card");
+    article.classList.add("selection-card");
 
 
 
