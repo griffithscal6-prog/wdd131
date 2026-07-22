@@ -1,0 +1,270 @@
+/**
+ * -------------------------------------------------------
+ * D&D 5.5e Character Builder
+ * summary.js
+ * -------------------------------------------------------
+ */
+
+document.addEventListener("DOMContentLoaded", initializePage);
+
+
+
+async function initializePage() {
+
+    loadCharacter();
+
+    const data = await loadData();
+
+    if (!data) {
+
+        return;
+
+    }
+
+    displayCharacterInfo(data);
+
+    displayAbilityScores();
+
+    displaySpeciesTraits(data);
+
+    displayClassFeatures(data);
+
+    displayBackgroundBenefits(data);
+
+    displayProficiencies(data);
+
+    document
+        .getElementById("startOverButton")
+        .addEventListener("click", startOver);
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Character Information                              */
+/* -------------------------------------------------- */
+
+function displayCharacterInfo(data) {
+
+    const container =
+        document.getElementById("characterInfo");
+
+    container.innerHTML = "";
+
+    const characterClass =
+        data.classes.find(c => c.id === character.class);
+
+    const species =
+        data.species.find(s => s.id === character.species);
+
+    const background =
+        data.backgrounds.find(b => b.id === character.background);
+
+    addParagraph(container, "Class", characterClass.name);
+
+    addParagraph(container, "Species", species.name);
+
+    addParagraph(container, "Background", background.name);
+
+    addParagraph(container, "Origin Feat", background.originFeat);
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Ability Scores                                     */
+/* -------------------------------------------------- */
+
+function displayAbilityScores() {
+
+    const container =
+        document.getElementById("abilityScores");
+
+    container.innerHTML = "";
+
+    Object.keys(character.abilities).forEach(ability => {
+
+        const score =
+            character.abilities[ability];
+
+        const modifier =
+            character.modifiers[ability];
+
+        const sign =
+            modifier >= 0 ? "+" : "";
+
+        const p =
+            document.createElement("p");
+
+        p.textContent =
+            `${capitalize(ability)}: ${score} (${sign}${modifier})`;
+
+        container.appendChild(p);
+
+    });
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Species Traits                                     */
+/* -------------------------------------------------- */
+
+function displaySpeciesTraits(data) {
+
+    const container =
+        document.getElementById("speciesTraits");
+
+    container.innerHTML = "";
+
+    const species =
+        data.species.find(s => s.id === character.species);
+
+    species.traits.forEach(trait => {
+
+        const li =
+            document.createElement("li");
+
+        li.textContent =
+            trait;
+
+        container.appendChild(li);
+
+    });
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Class Features                                     */
+/* -------------------------------------------------- */
+
+function displayClassFeatures(data) {
+
+    const container =
+        document.getElementById("classFeatures");
+
+    container.innerHTML = "";
+
+    const characterClass =
+        data.classes.find(c => c.id === character.class);
+
+    characterClass.classFeatures.forEach(feature => {
+
+        const li =
+            document.createElement("li");
+
+        li.textContent =
+            feature;
+
+        container.appendChild(li);
+
+    });
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Background Benefits                                */
+/* -------------------------------------------------- */
+
+function displayBackgroundBenefits(data) {
+
+    const container =
+        document.getElementById("backgroundBenefits");
+
+    container.innerHTML = "";
+
+    const background =
+        data.backgrounds.find(b => b.id === character.background);
+
+    addParagraph(container,
+        "Origin Feat",
+        background.originFeat);
+
+    addParagraph(container,
+        "Skills",
+        background.skills.join(", "));
+
+    addParagraph(container,
+        "Tool",
+        background.tool);
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Proficiencies                                      */
+/* -------------------------------------------------- */
+
+function displayProficiencies(data) {
+
+    const container =
+        document.getElementById("proficiencies");
+
+    container.innerHTML = "";
+
+    const characterClass =
+        data.classes.find(c => c.id === character.class);
+
+    addParagraph(
+        container,
+        "Weapons",
+        characterClass.weaponProficiencies.join(", ")
+    );
+
+    addParagraph(
+        container,
+        "Armor",
+        characterClass.armorTraining.join(", ")
+    );
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Utility Functions                                  */
+/* -------------------------------------------------- */
+
+function addParagraph(container, label, value) {
+
+    const p =
+        document.createElement("p");
+
+    p.innerHTML =
+        `<strong>${label}:</strong> ${value}`;
+
+    container.appendChild(p);
+
+}
+
+
+
+function capitalize(text) {
+
+    return text.charAt(0).toUpperCase() +
+        text.slice(1);
+
+}
+
+
+
+/* -------------------------------------------------- */
+/* Start Over                                         */
+/* -------------------------------------------------- */
+
+function startOver() {
+
+    localStorage.removeItem("character");
+
+    window.location.href =
+        "index.html";
+
+}
