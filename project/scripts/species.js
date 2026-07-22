@@ -83,7 +83,7 @@ function buildSpeciesCard(species) {
 
     button.addEventListener("click", () => {
 
-        setSpecies(speciesId);
+        setSpecies(species.id);
 
         saveCharacter();
 

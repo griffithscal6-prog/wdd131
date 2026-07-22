@@ -145,7 +145,7 @@ function buildBackgroundCard(background) {
 
     button.addEventListener("click", () => {
 
-        setBackground(backgroundId);
+        setBackground(background.id);
 
         saveCharacter();
 

@@ -11,11 +11,8 @@
 const character = {
 
     class: null,
-
     species: null,
-
     background: null,
-
     originFeat: null,
 
     selections: {},
@@ -167,19 +164,14 @@ function setSelection(category, option) {
 function resetCharacter() {
 
     character.class = null;
-
     character.species = null;
-
     character.background = null;
-
     character.originFeat = null;
-
     character.selections = {};
 
     for (const ability in character.abilities) {
 
         character.abilities[ability].score = null;
-
         character.abilities[ability].modifier = null;
 
     }
